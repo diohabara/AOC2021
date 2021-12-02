@@ -12,7 +12,7 @@ let rec list_of_each_three_numbers_sum numbers =
   | _ -> []
 ;;
 
-let handle_line new_number =
+let compare_lines new_number =
   prev := !cur;
   cur := new_number;
   if !prev < !cur then cnt := !cnt + 1
@@ -22,6 +22,6 @@ let () =
   let lines = In_channel.read_lines "input.txt" in
   let numbers = List.map ~f:int_of_string lines in
   let sums = list_of_each_three_numbers_sum numbers in
-  sums |> List.iter ~f:handle_line;
+  sums |> List.iter ~f:compare_lines;
   printf "%d\n" !cnt
 ;;
