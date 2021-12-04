@@ -6,4 +6,4 @@
 
 - Day01: OCaml
 - Day02: C++
-- Day03: Scheme
+- Day03: Python
